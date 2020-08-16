@@ -27,7 +27,7 @@ for ytid,ytparam in ytids:
     #get upload id from channel id
     uploadid = uploadsdet[0]['contentDetails']['relatedPlaylists']['uploads']
     channelid = uploadsdet[0]['id']
-    print(channelid)
+    #print(channelid)
     #retrieve list
     #urld = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId="+uploadid+"&key="+key
     #with urllib.request.urlopen(urld) as url:
@@ -69,5 +69,5 @@ def get_all_video_in_channel(channelid):
     return video_links
 
 
-
-#print(link)
+link = get_all_video_in_channel(channelid)
+print(link)
